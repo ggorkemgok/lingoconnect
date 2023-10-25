@@ -6,7 +6,7 @@ import collaboration2 from "../assets/collaboration2.jpg";
 
 const Content = () => {
   return (
-    <div className="text-center flex flex-col">
+    <div className="text-center flex flex-col" id="contentSection">
       <div className="md:px-32 bg-[#8ccdaf]">
         <p className="p-10 bg-[#8ccdaf]">
           Who are we? We are a trio of enthusiasts from different cultural

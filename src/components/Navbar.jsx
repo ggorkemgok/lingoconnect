@@ -1,4 +1,6 @@
 import React from "react";
+import instagram from "../assets/instagram.svg";
+import { Link } from "react-scroll";
 
 export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -11,7 +13,7 @@ export default function Navbar({ fixed }) {
               className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
               href="#pablo"
             >
-              pink Tailwind Starter Kit
+              LingoConnect
             </a>
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -28,29 +30,38 @@ export default function Navbar({ fixed }) {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center">
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
+                  href="https://www.instagram.com/lingoconnect2023/"
                 >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Share</span>
+                  <i className="fab fa-facebook-square text-sm leading-lg text-white opacity-75"></i>
+                  <span className="ml-2">
+                    <img
+                      src={instagram}
+                      alt="instagram svg"
+                      style={{ width: "30px", height: "30px" }}
+                    />
+                  </span>
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Tweet</span>
-                </a>
+              <li className="nav-item cursor-pointer">
+                <Link activeClass="active" to="contactSection" spy={true} smooth={true} duration={500}>
+                  <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+                    <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i>
+                    <span className="ml-2">Contact</span>
+                  </a>
+                </Link>
               </li>
+
               <li className="nav-item">
                 <a
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
                   href="#pablo"
                 >
-                  <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Pin</span>
+                  <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i>
+                  <span className="ml-2">Pin</span>
                 </a>
               </li>
             </ul>

@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Content from './components/Content'
 import Footer from './components/Footer'
+import { ContactUs } from './components/ContactUs'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Hero />
       <Content />
+      <ContactUs />
       <Footer />
     </>
   )
